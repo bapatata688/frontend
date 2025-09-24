@@ -474,7 +474,7 @@ const WebShield = () => {
       };
 
       const deleteProject = async (projectId) => {
-        if (confirm('¿Estás seguro de eliminar este proyecto?')) {
+        if (window.confirm('¿Estás seguro de eliminar este proyecto?')) {
           try {
             await projectsAPI.delete(projectId);
             setProjects(projects.filter(p => p.id !== projectId));
@@ -608,8 +608,8 @@ const WebShield = () => {
                   <label className="block text-sm font-medium text-gray-700 mb-1">Plan Actual</label>
                   <div className="flex items-center space-x-3">
                     <span className={`px-3 py-1 rounded-full text-sm font-medium ${user?.plan === 'free' ? 'bg-gray-100 text-gray-700' :
-                        user?.plan === 'pro' ? 'bg-blue-100 text-blue-700' :
-                          'bg-purple-100 text-purple-700'
+                      user?.plan === 'pro' ? 'bg-blue-100 text-blue-700' :
+                        'bg-purple-100 text-purple-700'
                       }`}>
                       {user?.plan?.toUpperCase()}
                     </span>
@@ -647,7 +647,7 @@ const WebShield = () => {
                         <div className="flex justify-between items-center">
                           <span className="font-medium">${payment.amount}</span>
                           <span className={`px-2 py-1 text-xs rounded-full ${payment.status === 'completed' ? 'bg-green-100 text-green-800' :
-                              'bg-yellow-100 text-yellow-800'
+                            'bg-yellow-100 text-yellow-800'
                             }`}>
                             {payment.status}
                           </span>
@@ -680,8 +680,8 @@ const WebShield = () => {
                 <div className="flex items-center space-x-2">
                   <span className="text-sm text-gray-600">Hola, {user?.email}</span>
                   <span className={`px-2 py-1 rounded-full text-xs font-medium ${user?.plan === 'free' ? 'bg-gray-100 text-gray-700' :
-                      user?.plan === 'pro' ? 'bg-blue-100 text-blue-700' :
-                        'bg-purple-100 text-purple-700'
+                    user?.plan === 'pro' ? 'bg-blue-100 text-blue-700' :
+                      'bg-purple-100 text-purple-700'
                     }`}>
                     {user?.plan?.toUpperCase()}
                   </span>
@@ -783,10 +783,10 @@ const WebShield = () => {
                   }
                 }}
                 className={`w-full py-3 px-6 rounded-lg font-medium transition-colors ${plan.id === 'free'
-                    ? 'bg-gray-200 text-gray-800 hover:bg-gray-300'
-                    : plan.color === 'blue'
-                      ? 'bg-blue-600 text-white hover:bg-blue-700'
-                      : 'bg-purple-600 text-white hover:bg-purple-700'
+                  ? 'bg-gray-200 text-gray-800 hover:bg-gray-300'
+                  : plan.color === 'blue'
+                    ? 'bg-blue-600 text-white hover:bg-blue-700'
+                    : 'bg-purple-600 text-white hover:bg-purple-700'
                   }`}
               >
                 {plan.id === 'free' ? 'Continuar Gratis' : 'Seleccionar Plan'}
@@ -1207,8 +1207,8 @@ const WebShield = () => {
                 onClick={undo}
                 disabled={historyIndex <= 0}
                 className={`flex items-center px-3 py-2 rounded-lg font-medium transition-colors ${historyIndex <= 0
-                    ? 'bg-gray-200 text-gray-400 cursor-not-allowed'
-                    : 'bg-gray-300 text-gray-700 hover:bg-gray-400'
+                  ? 'bg-gray-200 text-gray-400 cursor-not-allowed'
+                  : 'bg-gray-300 text-gray-700 hover:bg-gray-400'
                   }`}
                 title="Deshacer"
               >
@@ -1218,8 +1218,8 @@ const WebShield = () => {
                 onClick={redo}
                 disabled={historyIndex >= history.length - 1}
                 className={`flex items-center px-3 py-2 rounded-lg font-medium transition-colors ${historyIndex >= history.length - 1
-                    ? 'bg-gray-200 text-gray-400 cursor-not-allowed'
-                    : 'bg-gray-300 text-gray-700 hover:bg-gray-400'
+                  ? 'bg-gray-200 text-gray-400 cursor-not-allowed'
+                  : 'bg-gray-300 text-gray-700 hover:bg-gray-400'
                   }`}
                 title="Rehacer"
               >
@@ -1229,8 +1229,8 @@ const WebShield = () => {
                 onClick={handleSave}
                 disabled={!canSave || isSaving}
                 className={`flex items-center px-4 py-2 rounded-lg font-medium transition-colors ${canSave && !isSaving
-                    ? 'bg-green-600 text-white hover:bg-green-700 shadow-sm'
-                    : 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                  ? 'bg-green-600 text-white hover:bg-green-700 shadow-sm'
+                  : 'bg-gray-300 text-gray-500 cursor-not-allowed'
                   }`}
               >
                 {isSaving ? (
@@ -1251,8 +1251,8 @@ const WebShield = () => {
                 onClick={handleExport}
                 disabled={!canExport || loading}
                 className={`flex items-center px-4 py-2 rounded-lg font-medium transition-colors ${canExport && !loading
-                    ? 'bg-purple-600 text-white hover:bg-purple-700 shadow-sm'
-                    : 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                  ? 'bg-purple-600 text-white hover:bg-purple-700 shadow-sm'
+                  : 'bg-gray-300 text-gray-500 cursor-not-allowed'
                   }`}
               >
                 {loading ? (
