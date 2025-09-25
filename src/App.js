@@ -48,10 +48,11 @@ import {
   LogOut,
   Loader2
 } from 'lucide-react';
-
-// Configuración de la API
 const API_BASE_URL = 'https://webshield100-backend.onrender.com';
 import { authAPI, storage } from './api/config.js';
+
+
+// Configuración de la API
 
 
 const apiCall = async (endpoint, options = {}) => {
