@@ -85,17 +85,17 @@ const apiCall = async (endpoint, options = {}) => {
 };
 
 // APIs
-const authAPI = {
-  register: (userData) => apiCall('/auth/register', {
-    method: 'POST',
-    body: JSON.stringify(userData),
-  }),
-  login: (credentials) => apiCall('/auth/login', {
-    method: 'POST',
-    body: JSON.stringify(credentials),
-  }),
-  getProfile: () => apiCall('/auth/profile'),
-};
+//const authAPI = {
+//  register: (userData) => apiCall('/auth/register', {
+//    method: 'POST',
+//    body: JSON.stringify(userData),
+//  }),
+//  login: (credentials) => apiCall('/auth/login', {
+//    method: 'POST',
+//    body: JSON.stringify(credentials),
+//  }),
+//  getProfile: () => apiCall('/auth/profile'),
+//};
 
 const projectsAPI = {
   getAll: () => apiCall('/projects'),
