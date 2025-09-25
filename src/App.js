@@ -50,7 +50,9 @@ import {
 } from 'lucide-react';
 
 // Configuración de la API
-const API_BASE_URL = 'https://webshield100-backend.onrender.com/api';
+const API_BASE_URL = 'https://webshield100-backend.onrender.com';
+import { authAPI, storage } from './api/config.js';
+
 
 const apiCall = async (endpoint, options = {}) => {
   const url = `${API_BASE_URL}${endpoint}`;
