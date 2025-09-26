@@ -48,7 +48,6 @@ import {
   LogOut,
   Loader2,
   Clock,
-  AlertTriangle
 } from 'lucide-react';
 import { authAPI, projectsAPI, elementsAPI, paymentsAPI, statsAPI, dataLoaders, storage, loadUserProfile, loadProjects, loadStats, loadPaymentHistory } from './api/config.js';// Componente principal
 const WebShield = () => {
