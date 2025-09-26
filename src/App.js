@@ -46,7 +46,9 @@ import {
   Edit3,
   FolderPlus,
   LogOut,
-  Loader2
+  Loader2,
+  Clock,
+  AlertTriangle
 } from 'lucide-react';
 import { authAPI, projectsAPI, elementsAPI, paymentsAPI, statsAPI, dataLoaders, storage, loadUserProfile, loadProjects, loadStats, loadPaymentHistory } from './api/config.js';// Componente principal
 const WebShield = () => {
@@ -124,6 +126,7 @@ const WebShield = () => {
   }, [user, currentScreen]);
 
   // Funciones de carga
+  // prontas a implementacion
   const loadUserProfileData = async () => {
     try {
       const response = await loadUserProfile();
@@ -160,7 +163,7 @@ const WebShield = () => {
       console.error('Error loading payment history:', error);
     }
   };
-  // Utilidades
+  // Utilidades UX
   const addToHistory = (elements) => {
     const newHistory = history.slice(0, historyIndex + 1);
     newHistory.push([...elements]);
